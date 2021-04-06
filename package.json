@@ -1,6 +1,6 @@
 {
-  "homepage": "http://fmagesty.github.io/currency-converter",
-  "name": "react-currency-converter",
+  "homepage": "https://fmagesty.github.io/currency-converter",
+  "name": "currency-converter",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
