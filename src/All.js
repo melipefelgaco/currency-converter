@@ -26,13 +26,13 @@ export default function All() {
     const toRatio = async (resultado) => {
         const response = await fetch(`https://free.currconv.com/api/v7/convert?q=${saida}_${entrada}&compact=ultra&apiKey=${API_KEY}`)
         const responseBody = await response.json();
-        if (entrada === 'BRL') {
+        if (saida === 'BRL') {
             setResultado((resultado / responseBody[`${saida}_${entrada}`]).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }));
         }
-        if (entrada === 'USD') {
+        if (saida === 'USD') {
             setResultado((resultado / responseBody[`${saida}_${entrada}`]).toLocaleString('en-US', { style: 'currency', currency: 'USD' }));
         }
-        if (entrada === 'EUR') {
+        if (saida === 'EUR') {
             setResultado((resultado / responseBody[`${saida}_${entrada}`]).toLocaleString('de-DE', { style: 'currency', currency: 'EUR' }));
         }
         return resultado / responseBody[`${saida}_${entrada}`];
